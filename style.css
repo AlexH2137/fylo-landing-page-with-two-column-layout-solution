@@ -1,0 +1,293 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 18px;
+}
+
+h1, h2, .get-started, header nav {
+	font-family: 'Raleway', sans-serif;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	padding: 60px;
+}
+
+header nav {
+	min-width: 20%;
+}
+
+header nav a {
+	text-decoration: none;
+	color: #5d5c6d;
+	margin-right: 40px;
+}
+
+main {
+	display: grid;
+	grid-template-areas: 
+			"main1 img1"
+			"main2 img2";
+	padding: 10px 60px;
+	grid-gap: 60px;
+	align-items: center;
+	grid-row-gap: 300px;
+	overflow-x: hidden;
+	background-image: url("bg-curve-desktop.svg");
+	background-repeat: no-repeat;
+	background-position: bottom;
+	background-size: 300% 700px;
+}
+
+.main-text-1 {
+	grid-area: main1;
+}
+
+.main-text-2 {
+	grid-area: main2;
+}
+
+.img1 {
+	grid-area: img1;
+}
+
+.img2 {
+	grid-area: img2;
+}
+
+.main-imgs {
+	width: 350px;
+}
+
+.email {
+	height: 40px;
+	width: 300px;
+}
+
+.email::placeholder {
+	font-family: 'Open Sans', sans-serif;
+	color: #a2a2a2;
+	padding-left: 20px;
+}
+
+.get-started {
+	height: 40px;
+	width: 160px;
+	background-color: #2f65f9;
+	color: white;
+	border: none;
+	border-radius: 3px;
+	font-weight: bold;
+}
+
+.get-started:hover {
+	cursor: pointer;
+	background-color: #6b9bff;
+}
+
+.fylo-works {
+	padding-bottom: 5px;
+	border-bottom: 1px solid #4aa593;
+	width: 185px;
+}
+
+.fylo-works a {
+	text-decoration: none;
+	color: #4aa593;
+}
+
+.fylo-works:hover {
+	filter: opacity(0.4) drop-shadow(0 0 0 #9bded1);
+}
+
+.testimonial {
+	width: 60%;
+	margin: 30px 0;
+	box-shadow: 1px 1px 10px #acabb0;
+	border-radius: 5px;
+	padding: 30px;
+	background-color: white;
+}
+
+.quotes {
+	width: 30px;
+	padding-bottom: 5px;
+}
+
+.name {
+	display: flex;
+	align-items: center;
+	font-size: 14px;
+	padding: 10px 0;
+}
+
+.name b {
+	font-size: 16px
+}
+
+.avatar {
+	width: 40px;
+	border-radius: 60px;
+	margin-right: 10px;
+}
+
+.early-access {
+	background-color: #575988;
+	padding: 60px 100px 60px 60px;
+	color: white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.early-access-text {
+	width: 45%;
+}
+
+footer {
+	background-color: #07043b;
+	padding: 80px 100px 80px 80px;
+	height: 300px;
+}
+
+.footer-box {
+	display: flex;
+	justify-content: space-between;
+	color: white;
+}
+
+.contact {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 80px;
+	padding-top: 15px;
+}
+
+.contact-sections {
+	display: flex;
+	width: 250px;
+}
+
+.contact-sections p {
+	padding-left: 15px;
+}
+
+.contact-sections img {
+	width: 25px;
+}
+
+.about {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 120px;
+}
+
+.about a:hover {
+	color: #6672b8;
+}
+
+footer a {
+	text-decoration: none;
+	color: white;
+}
+
+.socials {
+	display: flex;
+	justify-content: space-between;
+	min-width: 80px;
+}
+
+.socials a:hover {
+	color: #739efd;
+}
+
+@media(max-width: 800px) {
+	header {
+		align-items: center;
+	}
+	
+	header img {
+		width: 100px;
+		height: 30px;
+	}
+	
+	header nav a {
+		margin-right: 10px;
+	}
+	
+	main {
+		grid-template-areas: 
+				"img1"
+				"main1"
+				"img2"
+				"main2";
+		text-align: center;
+		grid-row-gap: 100px;
+		align-items: center;
+		background-image: none;
+	}
+	
+	.main-imgs {
+		width: 100%;
+	}
+	
+	.input, .main-2-box {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	
+	.email, .get-started {
+		position: relative;
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	
+	.testimonial {
+		text-align: left;
+		width: 100%;
+	}
+	
+	.early-access {
+		flex-direction: column;
+		text-align: center;
+		padding-right: 60px;
+	}
+	
+	.early-access-text {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	
+	.early-access-input {
+		width: 100%;
+	}
+	
+	footer {
+		height: 600px;
+	}
+	
+	.footer-box {
+		flex-direction: column;
+	}
+	
+	.contact, .about {
+		margin-bottom: 20px;
+	}
+	
+	.socials {
+		justify-content: center;
+	}
+	
+	.socials a {
+		padding-right: 15px;
+	}
+}
